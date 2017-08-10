@@ -1,11 +1,14 @@
 {
   "name": "@naturalcycles/pify-ts",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "",
-  "main": "./pify.ts",
-  "es2015": "./pify.ts",
+  "main": "./dist/pify.js",
+  "es2015": "./dist/pify.js",
+  "typings": "./dist/pify.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "npm publish --access=public"
   },
   "repository": {
     "type": "git",

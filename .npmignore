@@ -1,0 +1,15 @@
+
+/.idea
+*.iml
+/.classpath
+/.project
+/.settings
+.DS_Store
+/*.log
+/log.txt
+/.sass-cache
+
+# /dist
+/node_modules
+
+/pify.ts

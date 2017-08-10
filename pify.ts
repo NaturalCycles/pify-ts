@@ -1,5 +1,5 @@
 
-interface PifyOptions {
+export interface PifyOptions {
   multiArgs?: boolean,
   include?: [string | RegExp],
   exclude?: [string | RegExp],

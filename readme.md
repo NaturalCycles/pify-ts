@@ -8,7 +8,7 @@
 
 ## Usage
 
-    import pify from '@naturalcycles/pify-ts/pify'
+    import pify from '@naturalcycles/pify-ts'
     
 Typings from `@types/pify` included.
 
