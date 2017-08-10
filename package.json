@@ -1,0 +1,25 @@
+{
+  "name": "@naturalcycles/pify-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./pify.ts",
+  "es2015": "./pify.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaturalCycles/pify-ts.git"
+  },
+  "keywords": [
+    "pify",
+    "promisify",
+    "@angular/cli"
+  ],
+  "author": "Kirill Groshkov <kirill@naturalcycles.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaturalCycles/pify-ts/issues"
+  },
+  "homepage": "https://github.com/NaturalCycles/pify-ts#readme"
+}
