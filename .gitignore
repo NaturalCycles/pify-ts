@@ -9,4 +9,5 @@
 /log.txt
 /.sass-cache
 
+/dist
 /node_modules

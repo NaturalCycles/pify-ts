@@ -12,7 +12,7 @@ interface PifyOptions {
 // declare function pify(input: any, options?: PifyOptions): any;
 
 
-const processFn = (fn, opts) => function () {
+const processFn = (fn: any, opts: any) => function () {
   const P = opts.promiseModule;
   const args = new Array(arguments.length);
 
@@ -20,9 +20,9 @@ const processFn = (fn, opts) => function () {
     args[i] = arguments[i];
   }
 
-  return new P((resolve, reject) => {
+  return new P((resolve: any, reject: any) => {
     if (opts.errorFirst) {
-    args.push(function (err, result) {
+    args.push(function (err: any, result: any) {
       if (opts.multiArgs) {
         const results = new Array(arguments.length - 1);
 
@@ -43,7 +43,7 @@ const processFn = (fn, opts) => function () {
       }
     });
   } else {
-    args.push(function (result) {
+    args.push(function (result: any) {
       if (opts.multiArgs) {
         const results = new Array(arguments.length - 1);
 
@@ -62,22 +62,22 @@ const processFn = (fn, opts) => function () {
 });
 };
 
-const pify = (obj, opts?: PifyOptions) => {
+const pify = (obj: any, opts?: PifyOptions) => {
   opts = Object.assign({
     exclude: [/.+(Sync|Stream)$/],
     errorFirst: true,
     promiseModule: Promise
   }, opts);
 
-  const filter = key => {
-    const match = pattern => typeof pattern === 'string' ? key === pattern : pattern.test(key);
-    return opts.include ? opts.include.some(match) : !opts.exclude.some(match);
+  const filter = (key: any) => {
+    const match = (pattern: any) => typeof pattern === 'string' ? key === pattern : pattern.test(key);
+    return opts!.include ? opts!.include!.some(match) : !opts!.exclude!.some(match);
   };
 
   let ret;
   if (typeof obj === 'function') {
     ret = function () {
-      if (opts.excludeMain) {
+      if (opts!.excludeMain) {
         return obj.apply(this, arguments);
       }
 
