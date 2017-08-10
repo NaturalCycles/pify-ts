@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/NaturalCycles/pify-ts/issues"
   },
+  "private": false,
   "homepage": "https://github.com/NaturalCycles/pify-ts#readme"
 }

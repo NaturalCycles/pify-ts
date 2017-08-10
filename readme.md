@@ -11,3 +11,7 @@
     import pify from '@naturalcycles/pify-ts/pify'
     
 Typings from `@types/pify` included.
+
+## Publish (not to forget)
+
+    npm publish --access=public
